@@ -1,10 +1,8 @@
-<h1>欢迎</h1>
-<ul>
-    <li><a href="<?= site_url("travel") ?>">浙里游</a></li>
-    <li><a href="<?= site_url("stay") ?>">浙里住</a></li>
-    <li><a href="<?= site_url("release") ?>">浙里发</a></li>
-    <li><a href="<?= site_url("play") ?>">浙里玩</a></li>
-    <li><a href="<?= site_url("taste") ?>">浙里吃</a></li>
-    <li><a href="<?= site_url("buy") ?>">浙里买</a></li>
-</ul>
-
+<div style="background: url('<?= base_url('img/welcome.jpg') ?>') center no-repeat; background-size: 100% auto; position: absolute; top: 0; bottom: 0; left: 0; right: 0">
+    <a href="<?= site_url("home") ?>" id="goToHome" style="display: none"></a>
+</div>
+<script type="text/javascript">
+    setTimeout(function () {
+        $('#goToHome').trigger('click');
+    }, 5000)
+</script>
