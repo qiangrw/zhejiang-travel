@@ -1,5 +1,4 @@
 .DS_Store
-＊.iml
 
 application/cache/*
 !application/cache/index.html
@@ -8,3 +7,4 @@ application/cache/*
 application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
+*.iml
