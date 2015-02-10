@@ -1,4 +1,5 @@
 .DS_Store
+＊.iml
 
 application/cache/*
 !application/cache/index.html
