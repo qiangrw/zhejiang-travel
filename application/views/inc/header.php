@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Welcome to CodeIgniter</title>
-
+    <script type="text/javascript" name="baidu-tc-cerfication" data-appid="5384906" src="http://apps.bdimg.com/cloudaapi/lightapp.js"></script>
 	<style type="text/css">
 
 	::selection{ background-color: #E13300; color: white; }
