@@ -1,11 +1,11 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+﻿<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Buy extends CI_Controller {
 
 	public function index()
 	{
 		$this->load->view('inc/header');
-        $this->load->view('welcome/index');
+        $this->load->view('buy/index');
         $this->load->view('inc/footer');
 	}
 }
