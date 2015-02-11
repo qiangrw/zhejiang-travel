@@ -9,7 +9,7 @@
         top:0;
         bottom:0;
         right: 0;
-        background:url("http://1.datalib.sinaapp.com/staticDemo/clip/girl1.jpg") no-repeat;
+        background: none;
         background-size: 100% 100%;
         backface-visibility: hidden;
         overflow: hidden;
@@ -27,22 +27,90 @@
         opacity: 0 !important;
     }
 </style>
+<div style="background: url('<?= base_url('img/basic-bg.jpg') ?>') center no-repeat; background-size: 100% auto; position: absolute; top: 0; bottom: 0; left: 0; right: 0">
+    <div>
+        <img src="<?= base_url('img/stay/stay_logo.png') ?>" alt="" style="width: 40%; margin: 20px 15px;"/>
+        <img src="<?= base_url('img/shzj.png') ?>" alt="诗画浙江" style="width: 25%; float: right; margin: 10px;"/>
+    </div>
+    <div class="container">
+        <div class="video-thumb">
+            <img src="<?= base_url('img/stay/stay_banner.png') ?>" alt="" style="width: 100%;"/>
+        </div>
+        <div class="thumb-list">
+            <div class="thumb-item">
+                <img class="thumbnail" src="<?= base_url('img/stay/stay1.png') ?>" alt=""/>
+                <div class="info">
+                    <h4 class="title">乌镇测试住宅</h4>
+                    <p class="location">XXX小区内</p>
+                    <p class="comment">123 / test</p>
+                    <p class="des">南尖岩位于监督法了解对方垃圾感觉地方分上减肥撒开飞机撒娇福建犯困睡觉啊福建省风飒风</p>
+                </div>
+                <div class="price">
+                    <span class="appendix">$</span><strong class="number">108</strong><span class="appendix"> 起</span>
+                    <br/>
+                    <span class="addon">特别优惠噢噢噢噢噢</span>
+                </div>
+            </div>
+            <div class="thumb-item">
+                <img class="thumbnail" src="<?= base_url('img/stay/stay2.png') ?>" alt=""/>
+                <div class="info">
+                    <h4 class="title">乌镇测试住宅2</h4>
+                    <p class="location">XXX小区内</p>
+                    <p class="comment">123 / test</p>
+                    <p class="des">南尖岩位于监督法了解对方垃圾感觉地方分上减肥撒开飞机撒娇福建犯困睡觉啊福建省风飒风</p>
+                </div>
+                <div class="price">
+                    <span class="appendix">$</span><strong class="number">80</strong><span class="appendix"> 起</span>
+                    <br/>
+                    <span class="addon">特别优惠噢噢噢噢噢</span>
+                </div>
+            </div>
+            <div class="thumb-item">
+                <img class="thumbnail" src="<?= base_url('img/stay/stay1.png') ?>" alt=""/>
+                <div class="info">
+                    <h4 class="title">乌镇测试住宅</h4>
+                    <p class="location">XXX小区内</p>
+                    <p class="comment">123 / test</p>
+                    <p class="des">南尖岩位于监督法了解对方垃圾感觉地方分上减肥撒开飞机撒娇福建犯困睡觉啊福建省风飒风</p>
+                </div>
+                <div class="price">
+                    <span class="appendix">$</span><strong class="number">78</strong><span class="appendix"> 起</span>
+                    <br/>
+                    <span class="addon">特别优惠噢噢噢噢噢</span>
+                </div>
+            </div>
+            <div class="thumb-item">
+                <img class="thumbnail" src="<?= base_url('img/stay/stay2.png') ?>" alt=""/>
+                <div class="info">
+                    <h4 class="title">乌镇测试住宅2</h4>
+                    <p class="location">XXX小区内</p>
+                    <p class="comment">123 / test</p>
+                    <p class="des">南尖岩位于监督法了解对方垃圾感觉地方分上减肥撒开飞机撒娇福建犯困睡觉啊福建省风飒风</p>
+                </div>
+                <div class="price">
+                    <span class="appendix">$</span><strong class="number">67</strong><span class="appendix"> 起</span>
+                    <br/>
+                    <span class="addon">特别优惠噢噢噢噢噢</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="box" id="bb">
     <canvas id="cas" width="414" height="736"></canvas>
 </div>
-
 <script type="text/javascript" charset="utf-8">
     var canvas = document.getElementById("cas"),ctx = canvas.getContext("2d");
     var x1,y1,a=30,timeout,totimes = 100,jiange = 30;
     canvas.width = document.getElementById("bb").clientWidth;
     canvas.height = document.getElementById("bb").clientHeight;
     var img = new Image();
-    img.src = "<?= base_url('img/travel-cover.jpg') ?>";
+    img.src = "<?= base_url('img/basic-bg.jpg') ?>";
     img.onload = function(){
         ctx.drawImage(img,0,0,canvas.width,canvas.height)
         //ctx.fillRect(0,0,canvas.width,canvas)
         tapClip()
-    }
+    };
 
     //通过修改globalCompositeOperation来达到擦除的效果
     function tapClip(){
@@ -64,7 +132,7 @@
             y1 = hastouch?e.targetTouches[0].pageY:e.clientY-canvas.offsetTop;
 
             ctx.save();
-            ctx.beginPath()
+            ctx.beginPath();
             ctx.arc(x1,y1,1,0,2*Math.PI);
             ctx.fill();
             ctx.restore();
