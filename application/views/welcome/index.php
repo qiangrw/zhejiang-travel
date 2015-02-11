@@ -4,5 +4,5 @@
 <script type="text/javascript">
     setTimeout(function () {
         $('#goToHome').trigger('click');
-    }, 2000)
+    }, 3000)
 </script>
