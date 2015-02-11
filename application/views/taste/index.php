@@ -68,6 +68,8 @@
         <img src="<?= base_url('img/taste/taste_logo.png') ?>" alt="诗画浙江" style="width: 50%; float: right; margin: 10px;"/>
     </div>
 </div>
+<div class="cover" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: url('<?= base_url('img/taste/taste_cover.jpg') ?>') #f6f6f6 center no-repeat; background-size: 100% auto;">
+</div>
 <script>
     $('.cover').on('click', function (){
         $(this).fadeOut(500);
