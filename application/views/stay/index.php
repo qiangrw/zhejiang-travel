@@ -25,6 +25,7 @@
 
     .noOp{
         opacity: 0 !important;
+        display: none;
     }
 </style>
 <div style="background: url('<?= base_url('img/basic-bg.jpg') ?>') center no-repeat; background-size: 100% auto; position: absolute; top: 0; bottom: 0; left: 0; right: 0">
@@ -96,16 +97,28 @@
         </div>
     </div>
 </div>
+<div id="release-cover" class="cover" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: url('<?= base_url('img/basic-bg.jpg') ?>') #f6f6f6 center no-repeat; background-size: 100% auto;">
+    <div>
+        <img src="<?= base_url('img/stay/stay_logo.png') ?>" alt="" style="width: 40%; margin: 20px 15px;"/>
+        <img src="<?= base_url('img/shzj.png') ?>" alt="诗画浙江" style="width: 25%; float: right; margin: 10px;"/>
+    </div>
+    <img src="<?= base_url('img/stay/stay_cover.png') ?>" alt="" style="width: 100%; position: absolute; bottom: 0;"/>
+</div>
 <div class="box" id="bb">
     <canvas id="cas" width="414" height="736"></canvas>
 </div>
+<script>
+    $('.cover').on('click', function (){
+        $(this).fadeOut(500);
+    });
+</script>
 <script type="text/javascript" charset="utf-8">
     var canvas = document.getElementById("cas"),ctx = canvas.getContext("2d");
     var x1,y1,a=30,timeout,totimes = 100,jiange = 30;
     canvas.width = document.getElementById("bb").clientWidth;
     canvas.height = document.getElementById("bb").clientHeight;
     var img = new Image();
-    img.src = "<?= base_url('img/basic-bg.jpg') ?>";
+    img.src = "<?= base_url('img/stay/stay_cover2.jpg') ?>";
     img.onload = function(){
         ctx.drawImage(img,0,0,canvas.width,canvas.height)
         //ctx.fillRect(0,0,canvas.width,canvas)
@@ -154,6 +167,7 @@
                     }
                     if(dd/(imgData.width*imgData.height/(jiange*jiange))<0.4){
                         canvas.className = "noOp";
+                        canvas.parentNode.className = "noOp"
                     }
                 },totimes)
             });
@@ -213,6 +227,7 @@
                     }
                     if(dd/(imgData.width*imgData.height/(jiange*jiange))<0.4){
                         canvas.className = "noOp";
+                        canvas.parentNode.className = "noOp"
                     }
                 },totimes)
 
