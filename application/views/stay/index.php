@@ -31,7 +31,9 @@
 <div style="background: url('<?= base_url('img/basic-bg.jpg') ?>') center no-repeat; background-size: 100% auto; position: absolute; top: 0; bottom: 0; left: 0; right: 0">
     <div>
         <img src="<?= base_url('img/stay/stay_logo.png') ?>" alt="" style="width: 40%; margin: 20px 15px;"/>
+        <a href="<?= site_url('home') ?>">
         <img class="shzj-logo" src="<?= base_url('img/shzj.png') ?>" alt="诗画浙江" style="width: 25%; float: right; margin: 10px;"/>
+        </a>
     </div>
     <div class="container">
         <div class="video-thumb">
@@ -100,7 +102,9 @@
 <div class="cover" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: url('<?= base_url('img/basic-bg.jpg') ?>') #f6f6f6 center no-repeat; background-size: 100% auto;">
     <div>
         <img src="<?= base_url('img/stay/stay_logo.png') ?>" alt="" style="width: 40%; margin: 20px 15px;"/>
+        <a href="<?= site_url('home') ?>">
         <img src="<?= base_url('img/shzj.png') ?>" alt="诗画浙江" style="width: 25%; float: right; margin: 10px;"/>
+        </a>
     </div>
     <img src="<?= base_url('img/stay/stay_cover.png') ?>" alt="" style="width: 100%; position: absolute; bottom: 0;"/>
 </div>
