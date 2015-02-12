@@ -48,22 +48,57 @@
     <canvas id="cas" width="1080" height="1920"></canvas>
 </div>
 <script type="text/javascript">
+    function SImage(callback){
+        var img=new Image();
+        this.img=img;
+        var appname=navigator.appName.toLowerCase();
+        if(appname.indexOf("netscape")==-1){
+            //ie，在 ie 下面使用 onreadystatechange 事件
+            img.onreadystatechange=function(){
+                if(img.readyState=="complete"){
+                    callback(img);
+                }
+            };
+        }else{
+            //firefox
+            img.onload=function(){
+                while(img.complete==false) {
+                    setTimeout(function() {
 
+                    }, 10)
+                }
+                if(img.complete==true){
+                    callback(img);
+                }
+            }
+        }
+    }
+    SImage.prototype.get=function(url){
+        this.img.src=url;
+    };
+    //使用案例
+    var img=new SImage(icall);
+    img.get(document.getElementById("erase-img").src);
+    function icall(obj){
+        ctx.drawImage(obj,0,0,canvas.width,canvas.height);
+        //ctx.fillRect(0,0,canvas.width,canvas)
+        tapClip();
+    }
     var canvas = document.getElementById("cas"),ctx = canvas.getContext("2d");
     var x1,y1,a=30,timeout,totimes = 100,jiange = 30;
     canvas.width = document.getElementById("bb").clientWidth;
     canvas.height = document.getElementById("bb").clientHeight;
-    var img = document.getElementById("erase-img");
-    img.onload = function(){
-        ctx.drawImage(img,0,0,canvas.width,canvas.height);
-        //ctx.fillRect(0,0,canvas.width,canvas)
-        tapClip()
-    };
 
     function enter_scene() {
         $('#bb').fadeOut(500, function () {
-            $(this).remove()
-        })
+            $(this).remove();
+            var itmL = $('.stay-nav');
+            for (var i = 0; i < itmL.length; i++) {
+                var itm = $(itmL[i]);
+                itm.css('transition-delay', i * 0.1 + "s");
+                itm.addClass('shown')
+            }
+        });
     }
 
     //通过修改globalCompositeOperation来达到擦除的效果
@@ -79,7 +114,7 @@
         ctx.globalCompositeOperation = "destination-out";
 
         canvas.addEventListener(tapstart , function(e){
-            clearTimeout(timeout)
+            clearTimeout(timeout);
             e.preventDefault();
 
             x1 = hastouch?e.targetTouches[0].pageX:e.clientX-canvas.offsetLeft;

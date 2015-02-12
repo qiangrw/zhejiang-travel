@@ -205,11 +205,20 @@ hr {
   margin-left: 10px;
   clear: both;
   .stay-nav {
+    -webkit-transition: margin-top 0.5s;
+    -moz-transition: margin-top 0.5s;
+    -ms-transition: margin-top 0.5s;
+    -o-transition: margin-top 0.5s;
+    transition: margin-top 0.5s;;
+    margin-top: 110px;
     float: left;
     width: 25%;
     height: 110px;
     display: block;
     background-size: 400% auto !important;
     background-repeat: no-repeat !important;
+    &.shown {
+      margin-top: 0;
+    }
   }
 }
