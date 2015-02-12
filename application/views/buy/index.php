@@ -37,7 +37,7 @@
         </div>   
     </div>
 </div>
-<div class="cover" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: url('<?= base_url('img/buy/buy_cover_after.png') ?>') #f6f6f6 center no-repeat; background-size: 100% auto;">
+<div class="cover" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: url('<?= base_url('img/buy/buy_cover_after.jpg') ?>') #f6f6f6 center no-repeat; background-size: 100% auto;">
     <div id="hand" style="background: url('<?= base_url('img/hand.png') ?>') no-repeat; background-size: 50px 50px; height: 50px; width: 50px; position: absolute; top: 45%; left: 50%;">
     </div>
 </div>
