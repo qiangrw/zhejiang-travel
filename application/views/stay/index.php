@@ -28,106 +28,43 @@
         display: none;
     }
 </style>
-<div style="background: url('<?= base_url('img/basic-bg.jpg') ?>') center no-repeat; background-size: 100% auto; position: absolute; top: 0; bottom: 0; left: 0; right: 0">
-    <div>
-        <img src="<?= base_url('img/stay/stay_logo.png') ?>" alt="" style="width: 40%; margin: 20px 15px;"/>
-        <a href="<?= site_url('home') ?>">
-        <img class="shzj-logo" src="<?= base_url('img/shzj.png') ?>" alt="诗画浙江" style="width: 25%; float: right; margin: 10px;"/>
-        </a>
-    </div>
-    <div class="container">
-        <div class="video-thumb">
-            <img src="<?= base_url('img/stay/stay_banner.png') ?>" alt="" style="width: 100%;"/>
-        </div>
-        <div class="thumb-list">
-            <div class="thumb-item">
-                <img class="thumbnail" src="<?= base_url('img/stay/stay1.png') ?>" alt=""/>
-                <div class="info">
-                    <h4 class="title">乌镇测试住宅</h4>
-                    <p class="location">XXX小区内</p>
-                    <p class="comment">123 / test</p>
-                    <p class="des">南尖岩位于监督法了解对方垃圾感觉地方分上减肥撒开飞机撒娇福建犯困睡觉啊福建省风飒风</p>
-                </div>
-                <div class="price">
-                    <span class="appendix">$</span><strong class="number">108</strong><span class="appendix"> 起</span>
-                    <br/>
-                    <span class="addon">特别优惠噢噢噢噢噢</span>
-                </div>
-            </div>
-            <div class="thumb-item">
-                <img class="thumbnail" src="<?= base_url('img/stay/stay2.png') ?>" alt=""/>
-                <div class="info">
-                    <h4 class="title">乌镇测试住宅2</h4>
-                    <p class="location">XXX小区内</p>
-                    <p class="comment">123 / test</p>
-                    <p class="des">南尖岩位于监督法了解对方垃圾感觉地方分上减肥撒开飞机撒娇福建犯困睡觉啊福建省风飒风</p>
-                </div>
-                <div class="price">
-                    <span class="appendix">$</span><strong class="number">80</strong><span class="appendix"> 起</span>
-                    <br/>
-                    <span class="addon">特别优惠噢噢噢噢噢</span>
-                </div>
-            </div>
-            <div class="thumb-item">
-                <img class="thumbnail" src="<?= base_url('img/stay/stay1.png') ?>" alt=""/>
-                <div class="info">
-                    <h4 class="title">乌镇测试住宅</h4>
-                    <p class="location">XXX小区内</p>
-                    <p class="comment">123 / test</p>
-                    <p class="des">南尖岩位于监督法了解对方垃圾感觉地方分上减肥撒开飞机撒娇福建犯困睡觉啊福建省风飒风</p>
-                </div>
-                <div class="price">
-                    <span class="appendix">$</span><strong class="number">78</strong><span class="appendix"> 起</span>
-                    <br/>
-                    <span class="addon">特别优惠噢噢噢噢噢</span>
-                </div>
-            </div>
-            <div class="thumb-item">
-                <img class="thumbnail" src="<?= base_url('img/stay/stay2.png') ?>" alt=""/>
-                <div class="info">
-                    <h4 class="title">乌镇测试住宅2</h4>
-                    <p class="location">XXX小区内</p>
-                    <p class="comment">123 / test</p>
-                    <p class="des">南尖岩位于监督法了解对方垃圾感觉地方分上减肥撒开飞机撒娇福建犯困睡觉啊福建省风飒风</p>
-                </div>
-                <div class="price">
-                    <span class="appendix">$</span><strong class="number">67</strong><span class="appendix"> 起</span>
-                    <br/>
-                    <span class="addon">特别优惠噢噢噢噢噢</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="cover" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: url('<?= base_url('img/basic-bg.jpg') ?>') #f6f6f6 center no-repeat; background-size: 100% auto;">
+<div class="cover" style="background: url('<?= base_url('img/stay/stay_cover.jpg') ?>') center; background-size: 100% auto;">
     <div>
         <img src="<?= base_url('img/stay/stay_logo.png') ?>" alt="" style="width: 40%; margin: 20px 15px;"/>
         <a href="<?= site_url('home') ?>">
         <img src="<?= base_url('img/shzj.png') ?>" alt="诗画浙江" style="width: 25%; float: right; margin: 10px;"/>
         </a>
     </div>
-    <img src="<?= base_url('img/stay/stay_cover.png') ?>" alt="" style="width: 100%; position: absolute; bottom: 0;"/>
+    <img src="" alt="" style="width: 100%; position: absolute; top: 0;"/>
+    <div class="stay-nav-wrapper">
+        <a class="stay-nav" href="<?= site_url('stay/detail') ?>" style="background: url('<?= base_url('img/stay/stay-nav.png') ?>') 0 0;"></a>
+        <a class="stay-nav" href="<?= site_url('stay/detail') ?>" style="background: url('<?= base_url('img/stay/stay-nav.png') ?>') 33% 0;"></a>
+        <a class="stay-nav" href="<?= site_url('stay/detail') ?>" style="background: url('<?= base_url('img/stay/stay-nav.png') ?>') 66% 0;"></a>
+        <a class="stay-nav" href="<?= site_url('stay/detail') ?>" style="background: url('<?= base_url('img/stay/stay-nav.png') ?>') 99% 0;"></a>
+    </div>
 </div>
+<img id="erase-img" src="<?= base_url('img/stay/stay_cover2.jpg') ?>" alt="" style="display: none"/>
 <div class="box" id="bb">
-    <canvas id="cas" width="414" height="736"></canvas>
+    <canvas id="cas" width="1080" height="1920"></canvas>
 </div>
-<script>
-    $('.cover').on('click', function (){
-        $(this).fadeOut(500);
-    });
-</script>
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
+
     var canvas = document.getElementById("cas"),ctx = canvas.getContext("2d");
     var x1,y1,a=30,timeout,totimes = 100,jiange = 30;
     canvas.width = document.getElementById("bb").clientWidth;
     canvas.height = document.getElementById("bb").clientHeight;
-    var img = new Image();
-    img.src = "<?= base_url('img/stay/stay_cover2.jpg') ?>";
+    var img = document.getElementById("erase-img");
     img.onload = function(){
-        ctx.drawImage(img,0,0,canvas.width,canvas.height)
+        ctx.drawImage(img,0,0,canvas.width,canvas.height);
         //ctx.fillRect(0,0,canvas.width,canvas)
         tapClip()
     };
+
+    function enter_scene() {
+        $('#bb').fadeOut(500, function () {
+            $(this).remove()
+        })
+    }
 
     //通过修改globalCompositeOperation来达到擦除的效果
     function tapClip(){
@@ -169,9 +106,8 @@
                             }
                         }
                     }
-                    if(dd/(imgData.width*imgData.height/(jiange*jiange))<0.4){
-                        canvas.className = "noOp";
-                        canvas.parentNode.className = "noOp"
+                    if(dd/(imgData.width*imgData.height/(jiange*jiange))<0.35){
+                        enter_scene()
                     }
                 },totimes)
             });
@@ -185,7 +121,7 @@
                 ctx.moveTo(x1,y1);
                 ctx.lineTo(x2,y2);
                 ctx.stroke();
-                ctx.restore()
+                ctx.restore();
 
                 x1 = x2;
                 y1 = y2;
@@ -229,9 +165,8 @@
                             }
                         }
                     }
-                    if(dd/(imgData.width*imgData.height/(jiange*jiange))<0.4){
-                        canvas.className = "noOp";
-                        canvas.parentNode.className = "noOp"
+                    if(dd/(imgData.width*imgData.height/(jiange*jiange))<0.35){
+                        enter_scene()
                     }
                 },totimes)
 
