@@ -28,13 +28,13 @@
     </div>
 </div>
 <script>
+    $('.master-img').fadeIn(800);
     setTimeout(function () {
         var dots = $('.nav-dot');
         for (var i = 0; i < dots.length; i++) {
             $(dots[i]).css('transition-delay', Math.random() * Math.random() * 1.5 + "s");
             $(dots[i]).addClass('active')
         }
-        $('.master-img').fadeIn(800);
         $('.nav-center').addClass('active')
-    }, 1000)
+    }, 500)
 </script>

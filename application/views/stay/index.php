@@ -43,6 +43,7 @@
     <canvas id="cas" width="1080" height="1920"></canvas>
 </div>
 <script type="text/javascript">
+    setTimeout(enter_scene, 6000);
     var img = new Image();
     img.onload = function() {
         ctx.drawImage(this, 0, 0, canvas.width, canvas.height);
