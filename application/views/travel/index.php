@@ -5,6 +5,10 @@
         window.addEventListener('devicemotion',deviceMotionHandler, false);
     }
 
+    $('.cover').on('click', function () {
+        window.location = "<?= site_url('travel/detail') ?>"
+    });
+
     var SHAKE_THRESHOLD = 1000;
     var x, y, z, last_x, last_y, last_z;
     var lastUpdate = 0;
@@ -27,6 +31,5 @@
             last_y = y;
             last_z = z;
         }
-
     }
  </script>
