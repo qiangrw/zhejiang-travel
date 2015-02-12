@@ -62,7 +62,7 @@
         </div>
     </div>
 </div>
-<div class="cover" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: url('<?= base_url('img/taste/taste_bg.png') ?>') #f6f6f6 center no-repeat; background-size: 100% auto;">
+<div class="cover" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: url('<?= base_url('img/taste/taste_bg.jpg') ?>') #f6f6f6 center no-repeat; background-size: 100% auto;">
     <div>
         <img src="<?= base_url('img/taste/taste_logo.png') ?>" alt="诗画浙江" style="width: 50%; float: right; margin: 10px;"/>
     </div>
