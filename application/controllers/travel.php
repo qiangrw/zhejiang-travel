@@ -8,6 +8,12 @@ class Travel extends CI_Controller {
         $this->load->view('travel/index');
         $this->load->view('inc/footer');
 	}
+    public function detail()
+    {
+        $this->load->view('inc/header');
+        $this->load->view('travel/detail');
+        $this->load->view('inc/footer');
+    }
 }
 
 /* End of file welcome.php */

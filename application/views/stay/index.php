@@ -44,11 +44,11 @@
 </div>
 <script type="text/javascript">
     var img = new Image();
-    img.src = "<?= base_url('img/stay/stay_cover2.jpg') ?>";
-    img.addEventListener('load', function() {
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    img.onload = function() {
+        ctx.drawImage(this, 0, 0, canvas.width, canvas.height);
         tapClip();
-    }, false);
+    };
+    img.src = "<?= base_url('img/stay/stay_cover2.jpg') ?>";
 //    setTimeout(function() {
 //        ctx.drawImage(img,0,0,canvas.width,canvas.height);
 //        tapClip();
