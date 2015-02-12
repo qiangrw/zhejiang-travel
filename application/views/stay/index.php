@@ -13,6 +13,7 @@
         background-size: 100% 100%;
         backface-visibility: hidden;
         overflow: hidden;
+        z-index: 100000;
     }
     #cas{
         width: 100%;
@@ -21,11 +22,6 @@
         -webkit-transition:opacity .5s;
         -ms-transition:opacity .5s;
         -moz-transition:opacity .5s;
-    }
-
-    .noOp{
-        opacity: 0 !important;
-        display: none;
     }
 </style>
 <div class="cover" style="background: url('<?= base_url('img/stay/stay_cover.jpg') ?>') center; background-size: 100% auto;">
@@ -43,47 +39,21 @@
         <a class="stay-nav" href="<?= site_url('stay/detail') ?>" style="background: url('<?= base_url('img/stay/stay-nav.png') ?>') 99% 0;"></a>
     </div>
 </div>
-<img id="erase-img" src="<?= base_url('img/stay/stay_cover2.jpg') ?>" alt="" style="display: none"/>
 <div class="box" id="bb">
     <canvas id="cas" width="1080" height="1920"></canvas>
 </div>
 <script type="text/javascript">
-    function SImage(callback){
-        var img=new Image();
-        this.img=img;
-        var appname=navigator.appName.toLowerCase();
-        if(appname.indexOf("netscape")==-1){
-            //ie，在 ie 下面使用 onreadystatechange 事件
-            img.onreadystatechange=function(){
-                if(img.readyState=="complete"){
-                    callback(img);
-                }
-            };
-        }else{
-            //firefox
-            img.onload=function(){
-                while(img.complete==false) {
-                    setTimeout(function() {
-
-                    }, 10)
-                }
-                if(img.complete==true){
-                    callback(img);
-                }
-            }
-        }
-    }
-    SImage.prototype.get=function(url){
-        this.img.src=url;
-    };
-    //使用案例
-    var img=new SImage(icall);
-    img.get(document.getElementById("erase-img").src);
-    function icall(obj){
-        ctx.drawImage(obj,0,0,canvas.width,canvas.height);
-        //ctx.fillRect(0,0,canvas.width,canvas)
+    var img = new Image();
+    img.src = "<?= base_url('img/stay/stay_cover2.jpg') ?>";
+    img.addEventListener('load', function() {
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
         tapClip();
-    }
+    }, false);
+//    setTimeout(function() {
+//        ctx.drawImage(img,0,0,canvas.width,canvas.height);
+//        tapClip();
+//    }, 500);
+
     var canvas = document.getElementById("cas"),ctx = canvas.getContext("2d");
     var x1,y1,a=30,timeout,totimes = 100,jiange = 30;
     canvas.width = document.getElementById("bb").clientWidth;
@@ -99,6 +69,7 @@
                 itm.addClass('shown')
             }
         });
+        $('.cover').fadeIn(300);
     }
 
     //通过修改globalCompositeOperation来达到擦除的效果
