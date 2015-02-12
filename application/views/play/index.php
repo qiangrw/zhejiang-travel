@@ -1,4 +1,4 @@
-<div class="" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: url('<?= base_url('img/basic-bg.jpg') ?>') #f6f6f6 center no-repeat; background-size: 100% auto;">
+<div class="cover">
     <div>
         <img src="<?= base_url('img/play/play_logo.png') ?>" alt="" style="width: 40%; margin: 20px 15px;"/>
         <a href="<?= site_url('home') ?>">
