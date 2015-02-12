@@ -27,12 +27,19 @@
     <div>
         <img src="<?= base_url('img/taste/taste_logo.png') ?>" alt="诗画浙江" style="width: 50%; float: right; margin: 10px;"/>
     </div>
+    <div id="hand" style="background: url('<?= base_url('img/hand.png') ?>') no-repeat; background-size: 50px 50px; height: 50px; width: 50px; position: absolute; top: 45%; left: 50%;">
+    </div>
 </div>
 <div class="cover" id="taste-cover" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: url('<?= base_url('img/taste/taste_cover.jpg') ?>') #f6f6f6 center no-repeat; background-size: 100% auto;">
 </div>
 <script>
+    // Hand Animation
     $('.cover').on('click', function (){
         $(this).fadeOut(500);
+        $("#hand").animate( { top: "+=6%" }, 500); 
+        $("#hand").animate( { top: "-=6%" }, 500); 
+        $("#hand").animate( { top: "+=6%" }, 500); 
+        $("#hand").animate( { top: "-=6%" }, 500); 
     });
 </script>
 

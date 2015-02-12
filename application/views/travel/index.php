@@ -1,9 +1,6 @@
 <div class="cover" style="background: url('<?= base_url('img/travel-cover.jpg') ?>') center no-repeat; background-size: 100% auto">
-<div id="hand" style="background: url('<?= base_url('img/hand.png') ?>') no-repeat; background-size: 50px 50px; height: 50px; width: 50px; position: absolute; top: 50%; left: 4%;">
-</div>
 </div>
 <script type="text/javascript">
-
     if (window.DeviceMotionEvent) {
         window.addEventListener('devicemotion',deviceMotionHandler, false);
     }
@@ -35,10 +32,4 @@
             last_z = z;
         }
     }
-
-    // Hand Animation
-    $("#hand").animate( { left: "+=50%", top: "-=6%" }, 1000); 
-    $("#hand").animate( { left: "-=50%", top: "+=6%" }, 1000); 
-    $("#hand").animate( { left: "+=50%", top: "-=6%" }, 1000); 
-    $("#hand").animate( { left: "-=50%", top: "+=6%" }, 1000); 
  </script>
