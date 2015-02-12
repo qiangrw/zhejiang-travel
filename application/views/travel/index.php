@@ -1,6 +1,13 @@
 <div class="cover" style="background: url('<?= base_url('img/travel-cover.jpg') ?>') center no-repeat; background-size: 100% auto">
+<div id="hint" style="display:none">
+<center>
+<p style="font-size: 0.8em; font-color: grey; text-shadow: 2px; padding-top: 10px;">晃动手机，摇曳喜糖垂杨柳</p>
+</center>
+</div>
 </div>
 <script type="text/javascript">
+    $("#hint").fadeIn(1000);
+    $("#hint").fadeOut(4000);
     if (window.DeviceMotionEvent) {
         window.addEventListener('devicemotion',deviceMotionHandler, false);
     }
