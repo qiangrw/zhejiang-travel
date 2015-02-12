@@ -9,63 +9,24 @@
         <div class="video-thumb">
             <img src="<?= base_url('img/stay/stay_banner.png') ?>" alt="" style="width: 100%;"/>
         </div>
+
         <div class="thumb-list">
+            <?php foreach ($items as $item): ?>
             <div class="thumb-item">
-                <img class="thumbnail" src="<?= base_url('img/stay/stay1.png') ?>" alt=""/>
+                <img class="thumbnail" src="<?= $item->thumbnail ?>" alt=""/>
                 <div class="info">
-                    <h4 class="title">乌镇测试住宅</h4>
-                    <p class="location">XXX小区内</p>
-                    <p class="comment">123 / test</p>
-                    <p class="des">南尖岩位于监督法了解对方垃圾感觉地方分上减肥撒开飞机撒娇福建犯困睡觉啊福建省风飒风</p>
+                    <h4 class="title"><?= $item->title ?></h4>
+                    <p class="location"><?= $item->location ?></p>
+                    <p class="comment"><?= $item->comment ?></p>
+                    <p class="des"><?= $item->description ?></p>
                 </div>
                 <div class="price">
-                    <span class="appendix">$</span><strong class="number">108</strong><span class="appendix"> 起</span>
+                    <span class="appendix">$</span><strong class="number"><?= $item->price ?></strong><span class="appendix"> 起</span>
                     <br/>
-                    <span class="addon">特别优惠噢噢噢噢噢</span>
+                    <span class="addon"><?= $item->addon ?></span>
                 </div>
             </div>
-            <div class="thumb-item">
-                <img class="thumbnail" src="<?= base_url('img/stay/stay2.png') ?>" alt=""/>
-                <div class="info">
-                    <h4 class="title">乌镇测试住宅2</h4>
-                    <p class="location">XXX小区内</p>
-                    <p class="comment">123 / test</p>
-                    <p class="des">南尖岩位于监督法了解对方垃圾感觉地方分上减肥撒开飞机撒娇福建犯困睡觉啊福建省风飒风</p>
-                </div>
-                <div class="price">
-                    <span class="appendix">$</span><strong class="number">80</strong><span class="appendix"> 起</span>
-                    <br/>
-                    <span class="addon">特别优惠噢噢噢噢噢</span>
-                </div>
-            </div>
-            <div class="thumb-item">
-                <img class="thumbnail" src="<?= base_url('img/stay/stay1.png') ?>" alt=""/>
-                <div class="info">
-                    <h4 class="title">乌镇测试住宅</h4>
-                    <p class="location">XXX小区内</p>
-                    <p class="comment">123 / test</p>
-                    <p class="des">南尖岩位于监督法了解对方垃圾感觉地方分上减肥撒开飞机撒娇福建犯困睡觉啊福建省风飒风</p>
-                </div>
-                <div class="price">
-                    <span class="appendix">$</span><strong class="number">78</strong><span class="appendix"> 起</span>
-                    <br/>
-                    <span class="addon">特别优惠噢噢噢噢噢</span>
-                </div>
-            </div>
-            <div class="thumb-item">
-                <img class="thumbnail" src="<?= base_url('img/stay/stay2.png') ?>" alt=""/>
-                <div class="info">
-                    <h4 class="title">乌镇测试住宅2</h4>
-                    <p class="location">XXX小区内</p>
-                    <p class="comment">123 / test</p>
-                    <p class="des">南尖岩位于监督法了解对方垃圾感觉地方分上减肥撒开飞机撒娇福建犯困睡觉啊福建省风飒风</p>
-                </div>
-                <div class="price">
-                    <span class="appendix">$</span><strong class="number">67</strong><span class="appendix"> 起</span>
-                    <br/>
-                    <span class="addon">特别优惠噢噢噢噢噢</span>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>

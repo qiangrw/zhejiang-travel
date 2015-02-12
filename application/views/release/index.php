@@ -10,18 +10,38 @@
             <a class="ui-btn ui-shadow ui-corner-all ui-icon-video ui-btn-icon-notext">Delete</a>
         </div>
         <div class="flat-card-list">
+        <?php foreach ($items as $item): ?>
             <div class="flat-card">
-                <h4 class="name">南尖岩 <small>景区级别: AAAAA</small></h4>
-                <p class="des">南尖岩位于监督法了解对方垃圾感觉地方分上减肥撒开飞机撒娇福建犯困睡觉啊福建省风飒风</p>
+                <h4 class="name"><?= $item->name?> <small>景区级别: <?= $item->level ?></small></h4>
+                <p class="des"><?= $item->description ?></p>
                 <hr/>
+                <div class="price-div">
+                   <span class="price-label">成人票：</span> 
+                   <span class="price"><?= $item->price ?><span>
+                   <span class="price-label">网络价：</span> 
+                   <span class="net-price"><?= $item->net_price ?><span>
+                   <a href="#">我要预订</a>
+                   <br>
+                   <span class="price-label">儿童票：</span> 
+                   <span class="price"><?= $item->child_price ?><span>
+                   <span class="price-note">暂不提供网络销售<span>
+                </div>
+                
+                <div class="reason">
+                <ul>
+                <?php for ($i = 0; $i < count($item->reasons); $i += 1): ?>
+                <li>
+                    <span>理由<?= $i+1 ?></span>
+                    <?= $item->reasons[$i] ?>
+                </li>
+                <?php endfor; ?>
+                </ul>
+                </div>
+
+
                 <img src="<?= base_url('img/demo/tmp1.png') ?>" alt="" style="width: 100%"/>
             </div>
-            <div class="flat-card">
-                <h4 class="name">南尖岩 <small>景区级别: AAAAA</small></h4>
-                <p class="des">南尖岩位于监督法了解对方垃圾感觉地方分上减肥撒开飞机撒娇福建犯困睡觉啊福建省风飒风</p>
-                <hr/>
-                <img src="<?= base_url('img/demo/tmp1.png') ?>" alt="" style="width: 100%"/>
-            </div>
+        <?php endforeach; ?>
         </div>
     </div>
     <div id="release-cover" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: url('<?= base_url('img/release.jpg') ?>') #f6f6f6 center no-repeat; background-size: 100% auto;">
