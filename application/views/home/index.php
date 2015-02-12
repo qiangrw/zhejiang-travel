@@ -36,5 +36,5 @@
             $(dots[i]).addClass('active')
         }
         $('.nav-center').addClass('active')
-    }, 500)
+    }, 500);
 </script>
