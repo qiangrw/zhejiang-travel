@@ -6,9 +6,6 @@
             <a class="nav-dot" href="<?= site_url("travel") ?>" style="position: absolute; bottom: 40%; left: 6%; width: 25%;">
                 <img src="<?= base_url('img/home/zly.png') ?>" alt="浙里游" style="width: 100%;"/>
             </a>
-<!--            <a class="nav-dot" href="--><?//= site_url("release") ?><!--" style="position: absolute; bottom: 65%; left: 36%; width: 78px; height: 79px;">-->
-<!--                <img src="--><?//= base_url('img/home/zlf.png') ?><!--" alt="浙里发" style="width: 100%;"/>-->
-<!--            </a>-->
             <a class="nav-dot" href="<?= site_url("stay") ?>" style="position: absolute; bottom: 50%; left: 50%; width: 32%;">
                 <img src="<?= base_url('img/home/zlz.png') ?>" alt="浙里住" style="width: 100%;"/>
             </a>
