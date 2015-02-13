@@ -1,3 +1,10 @@
+<div class="cover-static" style="background: url('<?= base_url('img/travel-bg.jpg') ?>') center no-repeat; background-size: 100% auto">
+    <div>
+        <a href="<?= site_url('home') ?>">
+            <img class="shzj-logo" src="<?= base_url('img/shzj.png') ?>" alt="诗画浙江" style="width: 25%; float: right; margin: 10px;"/>
+        </a>
+    </div>
+</div>
 <div class="cover" style="background: url('<?= base_url('img/travel-cover.jpg') ?>') center no-repeat; background-size: 100% auto">
 <div id="hint" style="display:none">
 <center>
@@ -12,8 +19,10 @@
         window.addEventListener('devicemotion',deviceMotionHandler, false);
     }
 
-    $('.cover').on('click', function () {
-        window.location = "<?= site_url('travel/detail') ?>"
+    var cover = $('.cover').on('click', function () {
+        $(this).fadeOut(500, function() {
+            cover.remove();
+        })
     });
 
     var SHAKE_THRESHOLD = 1000;
@@ -32,7 +41,9 @@
             var speed = Math.abs(x +y + z - last_x - last_y - last_z) / diffTime * 10000;
 
             if (speed > SHAKE_THRESHOLD) {
-                window.location = "<?= site_url('travel/detail') ?>"
+                cover.fadeOut(500, function() {
+                    cover.remove();
+                })
             }
             last_x = x;
             last_y = y;

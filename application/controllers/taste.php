@@ -2,7 +2,15 @@
 
 class Taste extends CI_Controller {
 
-	public function index()
+    public function index()
+    {
+//        add meta data like dongporou, xishishe as alist
+        $this->load->view('inc/header');
+        $this->load->view('taste/index');
+        $this->load->view('inc/footer');
+    }
+
+	public function detail()
     {
         // TODO get data from database        
         $data['items'] = array();
@@ -22,7 +30,7 @@ class Taste extends CI_Controller {
 
 
 		$this->load->view('inc/header');
-        $this->load->view('taste/index', $data);
+        $this->load->view('taste/detail', $data);
         $this->load->view('inc/footer');
 	}
 }
