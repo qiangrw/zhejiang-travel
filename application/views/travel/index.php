@@ -6,15 +6,9 @@
     </div>
 </div>
 <div class="cover" style="background: url('<?= base_url('img/travel-cover.jpg') ?>') center no-repeat; background-size: 100% auto">
-<div id="hint" style="display:none">
-<center>
-<p style="font-size: 1.2em; color: green; text-shadow: 5px 5px 5px #FFF; padding-top: 70%; font-family:'Microsoft Yahei';">晃动手机，摇曳西塘垂杨柳</p>
-</center>
-</div>
+<div id="hint" style="display:none"> <center> <p style="font-size: 1.2em; color: green; text-shadow: 5px 5px 5px #FFF; padding-top: 70%; font-family:'Microsoft Yahei';">晃动手机，摇曳西塘垂杨柳</p> </center> </div>
 </div>
 <script type="text/javascript">
-    $("#hint").fadeIn(1000);
-    $("#hint").fadeOut(4000);
     if (window.DeviceMotionEvent) {
         window.addEventListener('devicemotion',deviceMotionHandler, false);
     }
@@ -49,5 +43,10 @@
             last_y = y;
             last_z = z;
         }
+    }
+
+    for (var i = 1; i <= 6; i++) {
+        $("#hint").fadeIn(1000);
+        $("#hint").fadeOut(4000);
     }
  </script>

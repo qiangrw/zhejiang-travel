@@ -22,15 +22,21 @@
     </div>
 </div>
 <div class="cover" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: url('<?= base_url('img/play/play_cover.jpg') ?>') #f6f6f6 center no-repeat; background-size: 100% auto;">
-    <div id="hand" style="background: url('<?= base_url('img/hand.png') ?>') no-repeat; background-size: 30px 30px; height: 30px; width: 30px; position: absolute; top: 45%; left: 50%;">
-    </div>
+<div id="hint" style="display:none"> 
+<center> 
+<p style="font-size: 1.2em; color: green; text-shadow: 5px 5px 5px grey; padding-top: 2%; font-family:'Microsoft Yahei';">
+点击屏幕跳过动画
+</p> 
+</center> 
+</div>
 </div>
 <script>
-    $("#hand").animate( { top: "+=6%" }, 500); 
-    $("#hand").animate( { top: "-=6%" }, 500); 
-    $("#hand").animate( { top: "+=6%" }, 500); 
-    $("#hand").animate( { top: "-=6%" }, 500); 
+    for (var i = 1; i <= 6; i++) {
+        $("#hint").fadeIn(1000);
+        $("#hint").fadeOut(4000);
+    }
     $('.cover').on('click', function (){
+        $("#hint").hide();
         $(this).fadeOut(500);
     });
 </script>
