@@ -1,6 +1,4 @@
 <div class="cover-static" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: url('<?= base_url('img/taste/taste_bg.jpg') ?>') #f6f6f6 center no-repeat; background-size: 100% auto;">
-    <div id="hand" style="background: url('<?= base_url('img/hand.png') ?>') no-repeat; background-size: 50px 50px; height: 50px; width: 50px; position: absolute; top: 45%; left: 50%;">
-    </div>
     <div class="taste-bubble-wrapper">
         <a data-size="bg" href="<?= site_url('taste/detail') ?>" class="taste-bubble" style="position: absolute; top: 50%; left: 50%; margin-left: -34%">
             东坡肉
@@ -28,15 +26,9 @@
 <div class="cover" id="taste-cover" style="background: url('<?= base_url('img/taste/taste_cover.jpg') ?>') #f6f6f6 center no-repeat; background-size: 100% auto;">
 </div>
 <script>
-    // Hand Animation
     $('body').css('overflow', 'hidden');
     $('.cover').on('click', function (){
         $(this).fadeOut(500);
-        var hand = $("#hand");
-        hand.animate( { top: "+=6%" }, 500);
-        hand.animate( { top: "-=6%" }, 500);
-        hand.animate( { top: "+=6%" }, 500);
-        hand.animate( { top: "-=6%" }, 500);
         var bubbleL = $('.taste-bubble');
         for (var i =0; i < bubbleL.length; i ++) {
             var bubble = $(bubbleL.get(i));
