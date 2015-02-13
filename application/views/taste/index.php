@@ -1,5 +1,32 @@
-<<<<<<< HEAD
+
 <div class="cover-static" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: url('<?= base_url('img/taste/taste_bg.jpg') ?>') #f6f6f6 center no-repeat; background-size: 100% auto;">
+    <div>
+        <img src="<?= base_url('img/taste/taste_logo.png') ?>" alt="诗画浙江" style="width: 50%; float: right; margin: 10px;"/>
+        <a href="<?= site_url('home') ?>">
+            <img class="shzj-logo" src="<?= base_url('img/shzj.png') ?>" alt="诗画浙江" style="width: 25%; float: left; margin: 10px;"/>
+        </a>
+    </div>
+    <div id="hand" style="background: url('<?= base_url('img/hand.png') ?>') no-repeat; background-size: 50px 50px; height: 50px; width: 50px; position: absolute; top: 45%; left: 50%;">
+    </div>
+
+    <div class="taste-bubble-wrapper">
+        <a data-size="bg" href="<?= site_url('taste/detail') ?>" class="taste-bubble" style="position: absolute; top: 50%; left: 50%; margin-left: -30%">
+            东坡肉
+        </a>
+        <a data-size="bg" href="<?= site_url('taste/detail') ?>" class="taste-bubble" style="position: absolute; top: 50%; left: 50%; margin-left: 20%; margin-top: -20%;">
+            西施舌
+        </a>
+        <a data-size="md" href="<?= site_url('taste/detail') ?>" class="taste-bubble" style="position: absolute; top: 50%; left: 50%; margin-left: 30%; margin-top: 50%;">
+            嘉兴粽子
+        </a>
+        <a data-size="sm" href="<?= site_url('taste/detail') ?>" class="taste-bubble" style="position: absolute; top: 50%; left: 50%; margin-left: -30%; margin-top: -32%;">
+            金华火腿
+        </a>
+        <a data-size="sm" href="<?= site_url('taste/detail') ?>" class="taste-bubble" style="position: absolute; top: 50%; left: 50%; margin-left: -45%; margin-top: 25%;">
+            八珍糕
+        </a>
+    </div>
+</div>
 <div class="cover" id="taste-cover" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: url('<?= base_url('img/taste/taste_cover.jpg') ?>') #f6f6f6 center no-repeat; background-size: 100% auto;">
 </div>
 <script>
