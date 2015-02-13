@@ -3,10 +3,10 @@
     <div id="hand" style="background: url('<?= base_url('img/hand.png') ?>') no-repeat; background-size: 50px 50px; height: 50px; width: 50px; position: absolute; top: 45%; left: 50%;">
     </div>
     <div class="taste-bubble-wrapper">
-        <a data-size="bg" href="<?= site_url('taste/detail') ?>" class="taste-bubble" style="position: absolute; top: 50%; left: 50%; margin-left: -30%">
+        <a data-size="bg" href="<?= site_url('taste/detail') ?>" class="taste-bubble" style="position: absolute; top: 50%; left: 50%; margin-left: -34%">
             东坡肉
         </a>
-        <a data-size="bg" href="<?= site_url('taste/detail') ?>" class="taste-bubble" style="position: absolute; top: 50%; left: 50%; margin-left: 20%; margin-top: -20%;">
+        <a data-size="bg" href="<?= site_url('taste/detail') ?>" class="taste-bubble" style="position: absolute; top: 50%; left: 50%; margin-left: 15%; margin-top: -20%;">
             西施舌
         </a>
         <a data-size="md" href="<?= site_url('taste/detail') ?>" class="taste-bubble" style="position: absolute; top: 50%; left: 50%; margin-left: 30%; margin-top: 50%;">
