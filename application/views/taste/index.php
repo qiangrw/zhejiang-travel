@@ -26,7 +26,7 @@
 <div class="cover" id="taste-cover" style="background: url('<?= base_url('img/taste/taste_cover.jpg') ?>') #f6f6f6 center no-repeat; background-size: 100% auto;">
 <div id="hint" style="display:none"> 
 <center> 
-<p style="font-size: 1.2em; color: green; text-shadow: 5px 5px 5px grey; padding-top: 2%; font-family:'Microsoft Yahei';">
+<p style="font-size: 1.2em; color: green; text-shadow: 2px 2px 2px green; padding-top: 70%; font-family:'Microsoft Yahei';">
 点击屏幕进入吃货地图
 </p> 
 </center> 
