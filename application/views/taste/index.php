@@ -6,6 +6,8 @@
             <img class="shzj-logo" src="<?= base_url('img/shzj.png') ?>" alt="诗画浙江" style="width: 25%; float: left; margin: 10px;"/>
         </a>
     </div>
+    <div id="hand" style="background: url('<?= base_url('img/hand.png') ?>') no-repeat; background-size: 50px 50px; height: 50px; width: 50px; position: absolute; top: 45%; left: 50%;">
+    </div>
 
     <div class="taste-bubble-wrapper">
         <a data-size="bg" href="<?= site_url('taste/detail') ?>" class="taste-bubble" style="position: absolute; top: 50%; left: 50%; margin-left: -30%">
@@ -32,13 +34,11 @@
     $('body').css('overflow', 'hidden');
     $('.cover').on('click', function (){
         $(this).fadeOut(500);
-        /*var hand = $("#hand");
+        var hand = $("#hand");
         hand.animate( { top: "+=6%" }, 500);
         hand.animate( { top: "-=6%" }, 500);
         hand.animate( { top: "+=6%" }, 500);
         hand.animate( { top: "-=6%" }, 500);
-        $("#toolBackTo").fadeIn();
-         */
         var bubbleL = $('.taste-bubble');
         for (var i =0; i < bubbleL.length; i ++) {
             var bubble = $(bubbleL.get(i));

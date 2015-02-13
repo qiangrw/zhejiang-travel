@@ -22,4 +22,7 @@
             <?php endforeach; ?>
         </div>
     </div>
+    <div style="position: fixed; bottom: 10px; right: 5px;">
+        <a href="<?= site_url('home') ?>" style="padding: 6px 10px 5px 10px; background: rgba(255, 255, 255, .9); color: #666; border: 1px solid #ccc; border-radius: 3px; text-decoration: none; font-size: 14px;">返回主页</a>
+    </div>
 </div>
