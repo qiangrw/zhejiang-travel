@@ -22,21 +22,17 @@
     </div>
 </div>
 <div class="cover" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: url('<?= base_url('img/play/play_cover.jpg') ?>') #f6f6f6 center no-repeat; background-size: 100% auto;">
-<div id="hint" style="display:none"> 
+<div id="hint" style="padding-top: 0;">
 <center> 
-<p style="font-size: 1.2em; color: purple;  padding-top: 70%; font-family:'Microsoft Yahei';">
+<p class="g-hint">
 点击屏幕跳过动画
 </p> 
 </center> 
 </div>
 </div>
 <script>
-    for (var i = 1; i <= 6; i++) {
-        $("#hint").fadeIn(1000);
-        $("#hint").fadeOut(4000);
-    }
     $('.cover').on('click', function (){
-        $("#hint").hide();
         $(this).fadeOut(500);
+        $('#hint').fadeOut(250);
     });
 </script>

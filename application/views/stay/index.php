@@ -14,7 +14,6 @@
         background-size: 100% 100%;
         backface-visibility: hidden;
         overflow: hidden;
-        z-index: 100000;
     }
 
     #cas {
@@ -23,7 +22,7 @@
     }
 </style>
 <div class="cover"
-     style="background: url('<?= base_url('img/stay/stay_cover.jpg') ?>') center; background-size: 100% auto; overflow: hidden">
+     style="display: none; background: url('<?= base_url('img/stay/stay_cover.jpg') ?>') center; background-size: 100% auto; overflow: hidden">
     <div>
         <img src="<?= base_url('img/stay/stay_logo.png') ?>" alt="" style="width: 40%; margin: 20px 15px;"/>
         <a href="<?= site_url('home') ?>">
@@ -46,8 +45,14 @@
 <div class="box" id="bb">
     <canvas id="cas" width="300" height="400"></canvas>
 </div>
+<div id="hint" style="padding-top: 0 !important;">
+    <center>
+        <p class="g-hint">
+            擦一擦看美丽水乡
+        </p>
+    </center>
+</div>
 <script type="text/javascript">
-//    setTimeout(enter_scene, 6000);
     if (!$.stayImg) {
         $.stayImg = new Image();
     }
@@ -57,11 +62,10 @@
     canvas.height = document.getElementById("bb").clientHeight;
 
     $.stayImg.onload = function () {
-        console.log('OK');
         ctx.drawImage($.stayImg, 0, 0, canvas.width, canvas.height);
+        $('.cover').fadeIn(200);
         tapClip();
     };
-//    ctx.drawImage($.stayImg, 0, 0, canvas.width, canvas.height);
     $.stayImg.src = "<?= base_url('img/stay/stay_cover2.jpg') ?>";
 
     function enter_scene() {
@@ -74,6 +78,7 @@
                 itm.addClass('shown')
             }
         });
+        $('#hint').fadeOut(250);
         $('.cover').fadeIn(300);
     }
 
@@ -117,7 +122,7 @@
                             }
                         }
                     }
-                    if (dd / (imgData.width * imgData.height / (jiange * jiange)) < 0.35) {
+                    if (dd / (imgData.width * imgData.height / (jiange * jiange)) < 0.7) {
                         enter_scene()
                     }
                 }, totimes)
@@ -176,7 +181,7 @@
                             }
                         }
                     }
-                    if (dd / (imgData.width * imgData.height / (jiange * jiange)) < 0.35) {
+                    if (dd / (imgData.width * imgData.height / (jiange * jiange)) < 0.7) {
                         enter_scene()
                     }
                 }, totimes)

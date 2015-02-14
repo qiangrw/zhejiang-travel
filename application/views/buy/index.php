@@ -42,8 +42,16 @@
          style="background: url('<?= base_url('img/hand.png') ?>') no-repeat; background-size: 30px 30px; height: 30px; width: 30px; position: absolute; top: 45%; left: 50%;">
     </div>
 </div>
+<div id="hint" style="padding-top: 0;">
+    <center>
+        <p class="g-hint">
+            点击屏幕跳过动画
+        </p>
+    </center>
+</div>
 <script>
     $('.cover').on('click', function () {
         $(this).fadeOut(500);
+        $('#hint').fadeOut(250);
     });
 </script>

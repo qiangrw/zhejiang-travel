@@ -24,9 +24,9 @@
     </div>
 </div>
 <div class="cover" id="taste-cover" style="background: url('<?= base_url('img/taste/taste_cover.jpg') ?>') #f6f6f6 center no-repeat; background-size: 100% auto;">
-<div id="hint" style="display:none"> 
+<div id="hint">
 <center> 
-<p style="font-size: 1.2em; color: white;  padding-top: 70%; font-family:'Microsoft Yahei';">
+<p class="g-hint">
 点击屏幕进入吃货地图
 </p> 
 </center> 
@@ -34,10 +34,6 @@
 </div>
 <script>
     $('body').css('overflow', 'hidden');
-    for (var i = 1; i <= 6; i++) {
-        $("#hint").fadeIn(1000);
-        $("#hint").fadeOut(4000);
-    }
     $('.cover').on('click', function (){
         $(this).fadeOut(500);
         var bubbleL = $('.taste-bubble');
@@ -47,7 +43,7 @@
             bubble.addClass('shown-' + bubble.data('size'))
         }
 
-        $('#hint').hide();
+        $('#hint').fadeOut(250);
         $('body').css('overflow', 'scroll');
     });
 </script>
